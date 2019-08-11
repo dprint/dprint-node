@@ -1,0 +1,62 @@
+~~ lineWidth: 40 ~~
+== should print ==
+test&&other   ||asdf;
+
+[expect]
+test && other || asdf;
+
+== should print hanging when exceeding line width ==
+test && other || asdf && test || asdf && asdf;
+
+[expect]
+test && other || asdf && test || asdf
+    && asdf;
+
+== should print hanging when exceeding line width multiple times ==
+test && other || asdf && test || asdf && asdf || asdf && asdf || test && other || asdf && test || asdf && asdf;
+
+[expect]
+test && other || asdf && test || asdf
+    && asdf || asdf && asdf || test
+    && other || asdf && test || asdf
+    && asdf;
+
+== should handle comments on a different line in-between ==
+return test
+    // some comment
+    && container.pos !== container.end;
+
+[expect]
+return test
+    // some comment
+    && container.pos !== container.end;
+
+== should handle comments on a different line in-between when the operator is on the preceeding line ==
+return test &&
+    // some comment
+    container.pos !== container.end;
+
+[expect]
+return test
+    // some comment
+    && container.pos !== container.end;
+
+== should decide based on the left side's open paren token if it should be on a newline ==
+(test && other) && (
+    test && other
+);
+
+(test && other) &&
+(
+    test || other
+);
+
+[expect]
+(test && other) && (
+    test && other
+);
+
+(test && other)
+    && (
+        test || other
+    );

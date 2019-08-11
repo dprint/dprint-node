@@ -1,0 +1,44 @@
+~~ ifStatement.useBraces: "always" ~~
+== should force the use of braces when not specified ==
+if (true)
+    a;
+else
+    b;
+
+[expect]
+if (true) {
+    a;
+}
+else {
+    b;
+}
+
+== should keep the comment on the inner statement when switching from no braces to having braces ==
+if (true)
+    return ""; // test
+
+[expect]
+if (true) {
+    return ""; // test
+}
+
+== should ensure comments before an else if and else stay on line before ==
+if (true) {
+}
+// comment
+else if (true)
+    call();
+// other
+else {
+}
+
+[expect]
+if (true) {
+}
+// comment
+else if (true) {
+    call();
+}
+// other
+else {
+}

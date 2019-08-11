@@ -1,0 +1,82 @@
+~~ lineWidth: 30 ~~
+== should format ==
+test? 1: 2;
+
+[expect]
+test ? 1 : 2;
+
+== should convert to newlines when the first condition goes over the line width ==
+testingThisOutHereAgain ? test2 : test;
+
+[expect]
+testingThisOutHereAgain
+    ? test2
+    : test;
+
+== should convert to newlines when the second condition goes over the line width ==
+testingThis ? test2 : testingThis;
+
+[expect]
+testingThis
+    ? test2
+    : testingThis;
+
+== should use newlines when both are newlines ==
+test
+    ? 1
+    : 2;
+
+[expect]
+test
+    ? 1
+    : 2;
+
+== should use newlines when only the first is ==
+test
+    ? 1 : 2;
+
+[expect]
+test
+    ? 1
+    : 2;
+
+== should use newlines when only the second is ==
+test ? 1
+    : 2;
+
+[expect]
+test
+    ? 1
+    : 2;
+
+== should not use newlines when the first and second start on the same line, but the second goes onto multiple lines ==
+test ? test : a.b(m => {
+    return 5;
+});
+
+[expect]
+test ? test : a.b(m => {
+    return 5;
+});
+
+== should handle nested conditionals ==
+test
+    ? 1
+    : test
+    ? 3
+    : 4;
+
+[expect]
+test
+    ? 1
+    : test
+        ? 3
+        : 4;
+
+== should handle when the semi-colon falls exactly on the line width ==
+test ? testingThis : outABit1;
+
+[expect]
+test
+    ? testingThis
+    : outABit1;

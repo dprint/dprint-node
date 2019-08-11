@@ -1,0 +1,36 @@
+~~ lineWidth: 40 ~~
+== should print ==
+for (const t    in   test) {
+    a;
+    b;
+}
+
+[expect]
+for (const t in test) {
+    a;
+    b;
+}
+
+== should put brace on newline when on multiple lines ==
+for (const testingThis in outALittleBit) {
+    a;
+    b;
+}
+
+[expect]
+for (const testingThis
+    in outALittleBit)
+{
+    a;
+    b;
+}
+
+== should print a nested variable declaration with a semi-colon ==
+for (const t in test) {
+    const u = 5;
+}
+
+[expect]
+for (const t in test) {
+    const u = 5;
+}

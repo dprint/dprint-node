@@ -1,0 +1,39 @@
+== should format triple slash directives ==
+/// <reference path="test" />
+
+[expect]
+/// <reference path="test" />
+
+== should format triple slash directives with a space at the beginning if it doesn't have one ==
+///<reference path="test" />
+
+[expect]
+/// <reference path="test" />
+
+== should allow as many slashes at the beginning as the user likes ==
+////testing
+/////other
+
+[expect]
+//// testing
+///// other
+
+== should format when empty ==
+// test
+//
+// other
+
+[expect]
+// test
+//
+// other
+
+== should allow indenting ==
+// function test() {
+//     test;
+// }
+
+[expect]
+// function test() {
+//     test;
+// }
