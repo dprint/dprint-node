@@ -1,8 +1,0 @@
-~~ whileStatement.spaceAfterWhileKeyword: false ~~
-== should print ==
-while (true) {
-}
-
-[expect]
-while(true) {
-}

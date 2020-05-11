@@ -1,5 +1,0 @@
-== should format ==
-type T = keyof   Type;
-
-[expect]
-type T = keyof Type;

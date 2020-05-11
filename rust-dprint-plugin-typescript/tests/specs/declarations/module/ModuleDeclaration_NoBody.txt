@@ -1,5 +1,0 @@
-== should format without a body ==
-declare module "testing"
-
-[expect]
-declare module "testing";

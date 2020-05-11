@@ -1,7 +1,0 @@
-== should format ==
-class c implements Type  <  T  > {
-}
-
-[expect]
-class c implements Type<T> {
-}

@@ -1,8 +1,0 @@
-~~ commentLine.forceSpaceAfterSlashes: true ~~
-== should put a space after slashses ==
-//test
-///test
-
-[expect]
-// test
-/// test

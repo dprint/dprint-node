@@ -1,5 +1,0 @@
-== should format ==
-type Test<T extends keyof string> = Type[   T  ];
-
-[expect]
-type Test<T extends keyof string> = Type[T];

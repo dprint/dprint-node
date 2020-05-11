@@ -1,5 +1,0 @@
-== should format ==
-type T = [number, string ?  ];
-
-[expect]
-type T = [number, string?];
