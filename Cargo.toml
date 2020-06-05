@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "packages/dprint-plugin-jsonc/wasm",
+    "packages/dprint-plugin-typescript/wasm"
+]

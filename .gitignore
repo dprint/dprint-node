@@ -1,0 +1,13 @@
+/node_modules
+/dist
+/.rpt2_cache
+*.js.map
+npm-debug.log
+yarn-error.log
+yarn.lock
+package-lock.json
+target
+/lerna-debug.log
+/packages/core/wasm/target
+/packages/dprint-plugin-typescript/wasm/target
+/packages/dprint-plugin-jsonc/wasm/target

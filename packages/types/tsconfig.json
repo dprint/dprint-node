@@ -4,5 +4,5 @@
     "rootDir": "./src",
     "outDir": "./dist"
   },
-  "exclude": ["./scripts", "./dist", "./rollup.config.js", "./lib", "./playground"]
+  "exclude": ["./scripts", "./dist", "./rollup.config.js", "./lib"]
 }

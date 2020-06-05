@@ -1,0 +1,31 @@
+{
+  "$schema": "https://dprint.dev/schemas/v0.json",
+  "projectType": "openSource",
+  "lineWidth": 160,
+  "typescript": {
+    "useBraces": "preferNone",
+    "singleBodyPosition": "nextLine",
+    "preferHanging": true,
+    "preferSingleLine": false,
+    "nextControlFlowPosition": "nextLine",
+    "semiColons": "always",
+    "arrowFunction.useParentheses": "preferNone",
+    "tryStatement.nextControlFlowPosition": "sameLine"
+  },
+  "json": {
+    "indentWidth": 2
+  },
+  "includes": [
+    "**/*.{ts,tsx,js,jsx,json}"
+  ],
+  "excludes": [
+    "build-website",
+    "**/dist",
+    "**/target",
+    "**/wasm"
+  ],
+  "plugins": [
+    "https://plugins.dprint.dev/typescript-0.19.0.wasm",
+    "https://plugins.dprint.dev/json-0.4.0.wasm"
+  ]
+}

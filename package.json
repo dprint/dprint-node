@@ -1,0 +1,25 @@
+{
+  "name": "dprint-node",
+  "private": true,
+  "description": "Node packages for dprint.",
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "clean": "lerna clean",
+    "test": "lerna run test",
+    "format": "node packages/dprint/dist/cli-bin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dprint/dprint-node.git"
+  },
+  "author": "David Sherret",
+  "bugs": {
+    "url": "https://github.com/dprint/dprint-node/issues"
+  },
+  "homepage": "https://github.com/dprint/dprint-node#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  }
+}
