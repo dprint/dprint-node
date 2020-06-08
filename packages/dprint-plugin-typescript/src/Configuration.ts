@@ -113,6 +113,7 @@ export interface TypeScriptConfiguration {
 
     /**
      * Top level configuration that sets the configuration to what is used in Deno.
+     * @default false
      */
     deno?: boolean;
 
