@@ -17,26 +17,28 @@ export interface TypeScriptConfiguration {
     /**
      * Whether to use tabs (true) or spaces (false).
      * @default false
+     * @value true - Uses tabs for indentation.
+     * @value false - Uses spaces for indentation.
      */
     useTabs?: boolean;
     /**
-     * Whether semi-colons should be used.
+     * How semi-colons should be used.
      * @default "prefer"
      * @value "always" - Always uses semi-colons where applicable.
-     * @value "prefer" - Prefers to use semi-colons, but doesn't add one in certain scenarios
+     * @value "prefer" - Prefers semi-colons, but doesn't add one in certain scenarios
      * such as for the last member of a single-line type literal.
      * @value "asi" - Uses automatic semi-colon insertion. Only adds a semi-colon at the start
-     * of some expression statements when necessary.
+     * of some expression statements when necessary. Read more: https://standardjs.com/rules.html#semicolons
      */
     semiColons?: "always" | "prefer" | "asi";
     /**
-     * How to decide to use single or double quotes.
+     * How to use single or double quotes.
      * @default "alwaysDouble"
-     * @value "alwaysDouble" - Always use double quotes.
-     * @value "alwaysSingle" - Always use single quotes.
-     * @value "preferDouble" - Prefer using double quotes except in scenarios where the string
+     * @value "alwaysDouble" - Always uses double quotes.
+     * @value "alwaysSingle" - Always uses single quotes.
+     * @value "preferDouble" - Prefers using double quotes except in scenarios where the string
      * contains more double quotes than single quotes.
-     * @value "preferSingle" - Prefer using single quotes except in scenarios where the string
+     * @value "preferSingle" - Prefers using single quotes except in scenarios where the string
      * contains more single quotes than double quotes.
      */
     quoteStyle?: "alwaysDouble" | "alwaysSingle" | "preferDouble" | "preferSingle";
@@ -100,7 +102,8 @@ export interface TypeScriptConfiguration {
      */
     operatorPosition?: "maintain" | "sameLine" | "nextLine";
     /**
-     * Set to prefer hanging indentation when exceeding the line width.
+     * Set to prefer hanging indentation when exceeding the line width instead of making
+     * code split up on multiple lines.
      * @default false
      */
     preferHanging?: boolean;
