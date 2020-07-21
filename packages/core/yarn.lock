@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@dprint/types@~0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@dprint/types/-/types-0.4.0.tgz#ad36acb6776a26dd42fcf4ac3e462c1df3cf1486"
+
 "@dsherret/to-absolute-glob@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@dsherret/to-absolute-glob/-/to-absolute-glob-2.0.2.tgz#1f6475dc8bd974cea07a2daf3864b317b1dd332c"
@@ -590,8 +594,8 @@ locate-path@^5.0.0:
     p-locate "^4.1.0"
 
 lodash@^4.17.15:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
 
 log-symbols@3.0.0:
   version "3.0.0"
