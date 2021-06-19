@@ -7,7 +7,7 @@ Node packages for [dprint](https://github.com/dprint/dprint).
 
 ## THIS REPOSITORY IS ARCHIVED
 
-Dprint started as a Node project, but has slowly moved away from being bound to any language or platform specific ecosystem.
+dprint started as a Node project, but moved away from being bound to any language or platform specific ecosystem.
 
 1. To use the new CLI, download via the instructions at https://dprint.dev/install
-2. If you are wanting to use a dprint plugin in Node, then please use the web assembly file directly (see https://dprint.dev/plugins).
+2. If you are wanting to use a dprint plugin in Node, then please see [@dprint/formatter](https://github.com/dprint/js-formatter).
